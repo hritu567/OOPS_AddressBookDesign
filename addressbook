@@ -1,5 +1,5 @@
 #!/bin/bash -x
-function create()
+create()
 {
      echo "Enter address book name"
      read ab
@@ -13,7 +13,7 @@ function create()
            echo "Address created!" 
      fi
 }
-function insert()
+insert()
 {
      echo "Enter address book name"
      read ab
@@ -39,7 +39,7 @@ function insert()
            echo "Error : file is not present"
      fi
 }
-function display()
+display()
 {
      echo "Enter address book name"
      read ab
@@ -52,7 +52,7 @@ function display()
            echo "Error : file is not present"
      fi
 }
-function edit()
+edit()
 {
      echo "Enter address book name"
      read ab
@@ -82,7 +82,7 @@ function edit()
            echo "Error : file is not present"
      fi
 }
-function delete()
+delete()
 {
      echo "Enter address book name"
      read ab
@@ -115,7 +115,7 @@ do
       echo "3. Display"
       echo "4. Edit"
       echo "5. Delete"
-      echo "6. Exit"
+      echo "7. Exit"
       echo "Enter choice : "
       read choice
       case $choice in
