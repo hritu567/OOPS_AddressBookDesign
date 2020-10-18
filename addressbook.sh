@@ -52,6 +52,23 @@ function display()
            echo "Error : file is not present"
      fi
 }
+function search()
+{
+echo "Enter address book name"
+     read ab
+   #check address book is available or not in current working directory
+     res=`ls | grep $ab | wc -w`
+     if [ $res -gt 0 ]
+     then 
+           echo "Enter the person's name you are looking for : "
+           read find
+          #echo "Enter email "
+           #read email
+            grep -i $find $ab
+     else
+           echo "Error : file is not present"
+     fi
+}
 function edit()
 {
      echo "Enter address book name"
@@ -115,7 +132,8 @@ do
       echo "3. Display"
       echo "4. Edit"
       echo "5. Delete"
-      echo "6. Exit"
+      echo "6. Search"
+      echo "7. Exit"
       echo "Enter choice : "
       read choice
       case $choice in
@@ -124,7 +142,8 @@ do
               3) display ;;
               4) edit ;;
               5) delete ;;
-              6) exit ;;
+              6) search ;;
+              7) exit ;;
               *) echo "Wrong Choice!" ;;
       esac
 done
